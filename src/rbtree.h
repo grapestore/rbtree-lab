@@ -17,11 +17,18 @@ typedef struct {
   node_t *root;
 } rbtree;
 
+// node_t leaf_NIL = {
+//     .color = RBTREE_BLACK,
+//     .key = 0,
+//     .parent = NULL,
+//     .left = NULL,
+//     .right = NULL
+// };
+//extern node_t* NIL;
+
+
 rbtree *new_rbtree(void);
 void delete_rbtree(rbtree *);
-void left_Rotate(rbtree* root,node_t* node);
-void right_Rotate(rbtree* root,node_t* node);
-void Fixed(rbtree* root, node_t* node);
 node_t *rbtree_insert(rbtree *, const key_t);
 node_t *rbtree_find(const rbtree *, const key_t);
 node_t *rbtree_min(const rbtree *);
